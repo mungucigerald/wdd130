@@ -23,4 +23,11 @@ img {
 
 p {
     padding: 10px;
+    font-family: cursive;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 2px;
 }
