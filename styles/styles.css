@@ -1,61 +1,87 @@
-nav {
-    background-color: darkblue;
-    padding: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: darkblue;
+  --heading-color: darkblue;
+  --dotted-underline: 3px dotted #565353d9;
+}
+
+header {
+  background-color: var(--background-color);
+  padding: 10px;
 }
 
 nav a {
-    color: white;
-    display: block;
-    padding: 20px;
+  color: #fbfbb1a2;
+  display: block;
+  padding: 10px;
 }
 
 main {
-    max-width: 840px;
+  max-width: 840px;
+  padding: 15px 8px 20px 0;
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / .2);
-    padding: 1rem;
-    background-color: darkseagreen;
-    color: honeydew;
-    text-align: center;
-    font-size: .9rem;
-    font-family: 'Times New Roman', Times, serif;
+  width: 25em;
+  text-align: center;
+  position: relative;
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 h1 {
-    color: darkblue;
+  color: var(--heading-color);
+  text-decoration: underline rgb(12, 12, 24) 2px;
 }
 
 main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+  width: 150px;
+  height: auto;
+  border: 1px solid black;
+  padding: 2px;
+  margin-bottom: 1;
+  box-shadow: 0 0 30px gray;
+  float: right;
 }
 
 p {
-    padding: 0;
-    font-family: cursive;
+  padding: 10px;
+  font-family: cursive;
 }
 
 h2 {
-    border-bottom: 1px solid black;
+  position: absolute;
+  left: 103px;
+  top: 20px;
+  color: rgb(18, 64, 76);
 }
 
 footer {
-    background-color: darkblue;
-    color: white;
-    padding: 2px;
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+  background-color: var(--background-color);
+  color: white;
+  padding: 2px;
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(118, 112, 112, 0.2);
+  padding: 1rem;
+  background-color: rgb(114, 136, 114);
+  color: honeydew;
+  font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
 }
