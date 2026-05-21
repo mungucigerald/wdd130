@@ -77,7 +77,7 @@ section h2 {
 
 }
 
-article {
+.hero article {
     position: absolute;
     top: 350px;
     width: 100%;
@@ -93,4 +93,8 @@ article {
     float: right;
     width: 125px;
     border: 1px solid burlywood;
+}
+
+.socialmedia {
+    text-decoration: none;
 }
