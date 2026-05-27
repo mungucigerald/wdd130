@@ -241,7 +241,8 @@ footer img {
   text-decoration: none;
   padding: 20px 10px 10px;
   border-radius: 8px;
-  border: 1.5px solid var(--accent1-color) transition: border-color 0.2s,
+  border: 1.5px solid var(--accent1-color);
+  transition: border-color 0.2s,
     color 0.2s,
     background 0.2s;
 }
