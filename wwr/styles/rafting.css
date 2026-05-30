@@ -29,15 +29,16 @@ body {
 
 header {
   margin: 1rem auto;
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   padding: 0 48px;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--back-up-color);
   height: 125px;
   position: sticky;
-  top: 0;
+  top: o;
   z-index: 100;
   box-shadow: 0 2px;
 }
@@ -124,7 +125,7 @@ h1 {
   text-align: center;
   opacity: 0.7;
   background-color: var(--accent2-color);
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 section .history {
@@ -167,14 +168,13 @@ section .title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  background-color: var(--accent1-color)
+  background-color: var(--accent1-color);
 }
 
 .grid p {
   font-family: "Lora";
   padding: 0;
   font-size: 0.97rem;
-
 }
 
 .images-grid {
@@ -233,7 +233,6 @@ footer {
 
 footer img {
   padding: 0;
-
 }
 
 .socialmedia a {
@@ -242,7 +241,8 @@ footer img {
   padding: 20px 10px 10px;
   border-radius: 8px;
   border: 1.5px solid var(--accent1-color);
-  transition: border-color 0.2s,
+  transition:
+    border-color 0.2s,
     color 0.2s,
     background 0.2s;
 }
