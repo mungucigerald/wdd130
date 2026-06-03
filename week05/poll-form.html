@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/poll_form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h2>Contact Information</h2>
+        <form>
+            <div class="form-item column2">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-item column2"><label for="usermail">Email:</label>
+                <input type="text" id="usermail" name="usermail" required>
+            </div>
+            <h2>Questions</h2>
+            <div>
+                <label for="quantity">Select Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="form-item column1">
+                <label for="browser">What is your favorite browser? </label>
+                <select name="browser" id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="edge`">Edge</option>
+                    <option value="brave">Brave</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-item column1"><label for="pet">Do you have a household pet?</label>
+                <input type="checkbox" id="pet" name="pet">
+            </div>
+            <div><label for="feedback">LIST PLACES YOU HAVE LIVED:</label>
+                <textarea name="feedback" id="feedback" rows="2"
+                  placeholder="Entebbe, Kampala, Kakira, Jinja"></textarea>
+            </div>
+            <button type="submit">Submit Poll</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;2026 🔰 Gerald Munguci 🔰 Entebbe, Uganda</p>
+    </footer>
+</body>
+
+</html>
