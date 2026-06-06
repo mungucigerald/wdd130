@@ -146,7 +146,7 @@ main {
   border-radius: 8px;
 }
 
-.field {
+fieldset {
   display: grid;
   grid-template-columns: 120px 1fr;
   align-items: start;
@@ -154,14 +154,14 @@ main {
   margin-bottom: 14px;
 }
 
-.field label {
+fieldset label {
   padding-top: 10px;
   font-size: 0.95rem;
 }
 
-.field input[type="text"],
-.field input[type="email"],
-.field textarea {
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset textarea {
   width: 100%;
   padding: 7px 10px;
   border: 1px solid var(--accent2-color);
@@ -170,7 +170,7 @@ main {
   font-size: 0.9rem;
 }
 
-.field textarea {
+fieldset textarea {
   resize: vertical;
   min-height: 80px;
 }
@@ -188,7 +188,7 @@ input[type="radio"] {
   accent-color: var(--primary-color);
 }
 
-.field:has(input[type="checkbox"]) {
+fieldset:has(input[type="checkbox"]) {
   grid-template-columns: 1fr;
   flex-direction: row;
   align-items: center;

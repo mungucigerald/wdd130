@@ -42,16 +42,14 @@
             </div>
             <div class="user-input">
                 <form>
-                    <div class="field">
+                    <fieldset disabled>
                         <label for="name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="John Doe">
-                    </div>
-                    <div class="field">
                         <label for="usermail">Email:</label>
                         <input type="text" name="usermail" id="usermail"
                           placeholder="johndoe@gmail.com">
-                    </div>
-                    <div class="field">
+                    </fieldset>
+                    <fieldset>
                         <legend>Message <br>
                             Purpose</legend>
                         <input type="radio" id="inquiry" name="radioitems">
@@ -60,20 +58,19 @@
                         <label for="reservation">Reservation Question</label>
                         <input type="radio" id="suggestion" name="radioitems">
                         <label for="suggestion">Website Suggestion</label>
-                    </div>
-                </form>
-                <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Type Here . . ."></textarea>
-                </div>
-                <div class="field">
-                    <input type="checkbox" name="newsletter" id="newsletter">
-                    <label for="newsletter">Please Subscribe to our monthly newsletter</label>
-                </div>
-                <div><button type="submit">Get in Touch!</button></div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"
+                          placeholder="Type Here . . ."></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="newsletter">Please Subscribe to our monthly newsletter</label>
+                    </fieldset>
+                    <button type="submit">Get in Touch!</button>
                 </form>
             </div>
-        </div>
         </div>
         <div class="profiles">
             <div id="profile-intro">
