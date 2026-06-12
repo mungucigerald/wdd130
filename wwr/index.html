@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/rafting.css">
+    <link rel="icon" href="images/z-raftingcompas.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Embark on the ultimate white water rafting adventure on the River Nile with Nile Rafting Travels. Safe, thrilling, and unforgettable packages in Jinja, Uganda.">
+    <meta name="author" content="Gerald Munguci">
+    <title>Nile Rafting Travels | Home</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/z-raftingcompas.jpg" alt="Rafting Compass Logo">
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Attention-Grabbing Hero Section with Absolute Positioned Heading -->
+        <div class="hero">
+            <img src="images/rafting60_1024.jpg" alt="White Water Rafting on the Nile River">
+            <h1>Nile Rafting Travels</h1>
+            <article>
+                <img src="images/z-raftingcompas.jpg" alt="Rafting Compass Graphic" width="125">
+                <h2>Conquer The Mighty Nile</h2>
+                <h2>Unleash Your Inner Explorer.</h2>
+                <p>Welcome to Nile Rafting Travels! Based in the adventure capital of East
+                    Africa—Jinja, Uganda—we deliver unparalleled white water rafting excursions. Our
+                    professional crew balances heart-pumping rapids with world-class safety
+                    protocols for an unforgettable journey.</p>
+            </article>
+        </div>
+
+        <!-- Purpose & Offerings Showcase (Multi-Column CSS Grid Layout) -->
+        <section class="purpose-offerings" style="margin-top: 2rem;">
+            <h2 class="title" style="text-align: center; margin-bottom: 1rem;">Our Mission & Water
+                Offerings</h2>
+            <div class="grid">
+                <!-- Grid Element 1: Images Grid containing at least two additional images -->
+                <div class="images-grid"
+                  style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <img src="images/rapids.jpg" alt="Thrilling white water rapid wave navigation"
+                      style="width: 100%; border-radius: 8px;">
+                    <img src="images/group-1.jpg"
+                      alt="Rafting safety and training orientation group"
+                      style="width: 100%; border-radius: 8px;">
+                </div>
+                <!-- Grid Element 2: Corresponding content about purpose/offerings and a strong CTA to Trips -->
+                <div class="pitch-text">
+                    <h2>Unmatched Whitewater Purpose</h2>
+                    <p>At Nile Rafting Travels, our purpose is simple: to share the raw, untamed
+                        beauty of the legendary River Nile while prioritizing safety above all else.
+                        We believe in crafting active adventures that reconnect you with nature's
+                        pulse.</p>
+                    <p>Our diverse offerings range from tranquil family float trips and scenic
+                        birdwatching bypasses, to high-volume commercial Grade 5 rapids. Whichever
+                        river journey you choose, you are guided by international certified
+                        swiftwater rescuers.</p>
+                    <!-- Call To Action linking to trips.html -->
+                    <a href="trips.html"
+                      style="display: inline-block; text-decoration: none; width: 100%; max-width: 280px; margin-top: 10px;">
+                        <button type="submit" style="cursor: pointer; font-weight: bold;">Explore
+                            Our Trips & Packages!</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Sign-Up Form Section -->
+        <section class="newsletter-signup"
+          style="margin: 3rem 0; padding: 1rem; background-color: var(--secondary-color); border-radius: 8px;">
+            <h2 class="title2" style="text-align: center; margin-bottom: 0.5rem;">Join the Adventure
+                Club</h2>
+            <p
+              style="text-align: center; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Get exclusive discounts, safety guide tips, seasonal river level updates, and epic
+                trip highlights sent straight to your inbox!
+            </p>
+            <div class="user-input"
+              style="max-width: 450px; margin: 0 auto; background-color: var(--accent1-color);">
+                <form action="#" method="POST">
+                    <fieldset
+                      style="grid-template-columns: 80px 1fr; border: none; padding: 0; margin-bottom: 12px; gap: 8px;">
+                        <label for="subscriber-name"
+                          style="padding-top: 8px; font-weight: bold;">Name:</label>
+                        <input type="text" id="subscriber-name" name="subscriber-name"
+                          placeholder="First and Last Name" required>
+                    </fieldset>
+                    <fieldset
+                      style="grid-template-columns: 80px 1fr; border: none; padding: 0; margin-bottom: 15px; gap: 8px;">
+                        <label for="subscriber-email"
+                          style="padding-top: 8px; font-weight: bold;">Email:</label>
+                        <input type="email" id="subscriber-email" name="subscriber-email"
+                          placeholder="adventure@example.com" required
+                          style="width: 100%; padding: 7px 10px; border: 1px solid var(--accent2-color); border-radius: 4px; font-family: var(--body-font);">
+                    </fieldset>
+                    <button type="submit" style="cursor: pointer; font-weight: bold;">Subscribe to
+                        Newsletter</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Core Highlights Showcased in a Clean 3-Column Layout -->
+        <div class="profiles">
+            <div id="profile-intro">
+                <h2>Why Ride With Us?</h2>
+                <h2>The Nile Rafting Travels Difference</h2>
+            </div>
+            <div id="gallery">
+                <figure>
+                    <img src="images/safety_gear.jpg" alt="Top tier rafting safety equipment">
+                    <figcaption>
+                        <strong>Premium Equipment</strong>
+                        <p style="font-size: 0.85rem; padding: 4px 10px; text-align: center;">We
+                            utilize state-of-the-art self-bailing rafts, high-impact helmets, and
+                            industry-certified rescue gear.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/group-1.jpg" alt="Expert rafting guides training group">
+                    <figcaption>
+                        <strong>Elite Local Guides</strong>
+                        <p style="font-size: 0.85rem; padding: 4px 10px; text-align: center;">Our
+                            guides boast thousands of hours on the Nile, maintaining international
+                            safety and wilderness first responder certifications.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/camping_reverside.jpg" alt="Riverside campsite location">
+                    <figcaption>
+                        <strong>Eco-Retreat Campsites</strong>
+                        <p style="font-size: 0.85rem; padding: 4px 10px; text-align: center;">Wind
+                            down your adrenaline-fueled day at our private riverside camps offering
+                            local cuisines and unforgettable sunset views.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Secondary Call to Action -->
+        <section class="adventure" style="text-align: center; margin: 2rem 0;">
+            <div class="adventure-gallery"
+              style="border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem;">
+                <h2 class="title2">Ready to Make a Splash?</h2>
+                <p
+                  style="margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Reservations fill up fast during Peak Seasons. Get in touch with our operations
+                    manager today to customize your custom itinerary!</p>
+                <a href="contact.html"
+                  style="display: inline-block; text-decoration: none; max-width: 300px; margin: 0 auto;">
+                    <button type="submit" style="cursor: pointer; width: 220px;">Book Your
+                        Excursion</button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 🔰 Nile Rafting Travels 🔰 Gerald Munguci</p>
+        <nav class="socialmedia">
+            <a href="https://www.x.com">
+                <img src="images/x-bw.png" alt="X Logo" width="25">
+            </a>
+            <a href="https://www.tiktok.com">
+                <img src="images/tictok-bw.png" alt="TikTok Logo" width="25">
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="images/youtube.png" alt="YouTube Logo" width="25">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

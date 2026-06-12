@@ -1,271 +1,423 @@
 :root {
-  --primary-color: #004e7c;
-  /* deep ocean blue */
-  --secondary-color: #e8f4f8;
-  /* light sky */
-  /* bold orange */
-  --accent1-color: #ffffff;
-  /* white */
-  --accent2-color: #1a2e35;
-  /* dark teal black */
-  --back-up-color: rgb(239, 236, 236);
-  --border-color: antiquewhite;
-  --hover-color: gold;
-  --hover-border: goldenrod;
-  --heading-font: "Times New Roman", "Georgia" serif;
-  --body-font: Arial, Helvetica, sans-serif;
+    --primary-color: #004e7c;
+    /* deep ocean blue */
+    --secondary-color: #e8f4f8;
+    /* light sky */
+    --accent1-color: #ffffff;
+    /* white */
+    --accent2-color: #1a2e35;
+    /* dark teal black */
+    --back-up-color: rgb(239, 236, 236);
+    --border-color: antiquewhite;
+    --hover-color: gold;
+    --hover-border: goldenrod;
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--body-font);
-  color: var(--accent2-color);
-  width: 100%;
+    font-family: var(--body-font);
+    color: var(--accent2-color);
+    width: 100%;
 }
 
-header {
-  margin: 1rem auto;
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
-  padding: 0 48px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--back-up-color);
-  height: 125px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px;
-}
-
-.logo {
-  display: flex;
-  margin: 0 2rem 0 3rem;
-  width: 125px;
-  height: auto;
-}
-
-.navigation {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-}
-
-.navigation li {
-  flex: 0 0 auto;
-}
-
-.nav {
-  display: flex;
-  gap: 4px;
-  justify-content: flex-end;
-}
-
-.navigation a {
-  display: block;
-  padding: 10px 10px;
-  text-decoration: none;
-  color: var(--accent2-color);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  border-radius: 3px;
-  transition:
-    background 0.2s,
-    color 0.2s;
-}
-
-.navigation a:hover {
-  color: var(--accent1-color);
-  text-decoration: underline;
-  background: var(--accent2-color);
-}
-
+/* --- Layout Wrappers --- */
 header,
 main,
 footer {
-  max-width: 840px;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 840px;
+    width: 100%;
+    margin: 0 auto;
 }
 
+/* --- Header & Navigation --- */
+header {
+    margin: 1rem auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding: 0 48px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--back-up-color);
+    height: 125px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    margin: 0 2rem 0 3rem;
+    width: 125px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.navigation li {
+    flex: 0 0 auto;
+}
+
+.navigation a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--accent2-color);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navigation a:hover {
+    color: var(--accent1-color);
+    text-decoration: underline;
+    background: var(--accent2-color);
+}
+
+/* --- Typography & Elements --- */
 h1,
 h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 h1 {
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  background-color: var(--accent2-color);
-  color: var(--secondary-color);
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
 }
 
-.address {
-  text-align: center;
+/* Safe margin settings that do not break the header/footer navigations */
+main p,
+main section,
+main article {
+    margin: 16px;
+    padding: 8px;
 }
 
 p {
-  margin: 16px;
-  padding: 8px;
+    line-height: 1.5;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
+/* --- Hero Section (About Page) --- */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 1rem 0;
-  align-items: start;
-
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.map iframe {
-  width: 100%;
-  height: 500px;
-  border-radius: 8px;
-  border: none;
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+}
+
+.hero article {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    padding: 15px 30px;
+    margin: 0;
+    text-align: left;
+    font-family: var(--body-font);
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border: 1px solid var(--border-color);
+}
+
+/* --- General Grid Containers --- */
+/* Contact Page Layout Grid (2 Columns) */
+main > .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 1rem 0;
+    align-items: start;
+}
+
+/* About Page History Grid (3 Columns) */
+.history .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--accent1-color);
+}
+
+.history .grid p {
+    font-family: "Lora", serif;
+    padding: 0;
+    font-size: 0.97rem;
+}
+
+.images-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.images-grid img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* --- Section Titles --- */
+section .title {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 14px auto;
+    letter-spacing: 4px;
+}
+
+section .title2 {
+    display: block;
+    text-align: center;
+    letter-spacing: 4px;
+    width: 100%;
+}
+
+section h2 {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+/* --- Adventure Gallery (About Page) --- */
+.adventure-gallery {
+    background-color: var(--accent1-color);
+    display: grid;
+    padding: 1rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+    column-gap: 8px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 4px;
+}
+
+.gallery img {
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Contact Page Elements --- */
+.address {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.map,
+iframe {
+    width: 100%;
+    min-height: 505px;
+    height: auto;
+    border-radius: 8px;
+    border: none;
 }
 
 .user-input {
-  display: grid;
-  margin: 0;
-  padding: 16px;
-  border: 1px solid var(--accent2-color);
-  border-radius: 8px;
+    display: grid;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid var(--accent2-color);
+    border-radius: 8px;
 }
 
 fieldset {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  align-items: start;
-  gap: 8px;
-  margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accent2-color);
 }
 
 fieldset label {
-  padding-top: 10px;
-  font-size: 0.95rem;
+    padding-top: 10px;
+    font-size: 0.95rem;
 }
 
 fieldset input[type="text"],
 fieldset input[type="email"],
 fieldset textarea {
-  width: 100%;
-  padding: 7px 10px;
-  border: 1px solid var(--accent2-color);
-  border-radius: 4px;
-  font-family: var(--body-font);
-  font-size: 0.9rem;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid var(--accent2-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
 }
 
 fieldset textarea {
-  resize: vertical;
-  min-height: 80px;
+    resize: vertical;
+    min-height: 80px;
 }
 
 .radioitems {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-top: 4px;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 8px;
+    padding: 4px 0;
 }
 
 input[type="radio"] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--primary-color);
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
 }
 
-fieldset:has(input[type="checkbox"]) {
-  grid-template-columns: 1fr;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  accent-color: var(--primary-color);
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
 }
 
 button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  background-color: var(--primary-color);
-  color: var(--accent1-color);
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: background 0.2s;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 button[type="submit"]:hover {
-  background-color: var(--accent2-color);
+    background-color: var(--accent2-color);
 }
 
+/* --- Team Bios / Profiles (Contact Page) --- */
 .profiles {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 #profile-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 4px;
+    text-align: center;
 }
 
 #gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 1rem;
-  text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: var(--accent2-color);
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--accent2-color);
 }
 
+/* --- Footer --- */
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--back-up-color);
-  padding-right: 16px;
-  margin-top: 2rem;
-  border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--back-up-color);
+    padding: 10px 16px;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
 }
 
 footer img {
-  display: block;
+    display: block;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .socialmedia a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1.5px solid transparent;
-  transition:
-    border-color 0.2s, background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1.5px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
 }
 
 .socialmedia a:hover {
-  border-color: var(--hover-border);
-  background: var(--primary-color);
+    border-color: var(--hover-border);
+    background: var(--primary-color);
 }
